@@ -1,0 +1,53 @@
+
+    ifstream file("LuuTruMayBay.txt", ios::in);
+
+    if (!file.is_open()) {
+        cout << "Loi. Khong The Mo File.\n";
+        return;
+    }
+
+    //cout << "Ma May Bay\tNoi Di\t\tNoi Den\t\tThoi Gian Di\t\tThoi Gian Den\n";
+
+    bool foundMatch = false;
+   
+
+    while (file >> 
+    f4.MaMayBay3 >> 
+    f4.NoiDi3 >> 
+    f4.NoiDen3 >> 
+    f4.ThoiGianDi3 >> 
+    f4.ThoiGianDen3) {
+        switch (chon) {
+            case 1:
+            cout<<"Nhap Noi Xuat Phat: ";cin>>noixuatphat;
+                if (f4.NoiDi3 == noixuatphat) {
+                    cout << "Ma May Bay\tNoi Di\t\tNoi Den\t\tThoi Gian Di\t\tThoi Gian Den\n";
+                    cout << "\n" << f4.MaMayBay3 << "\t\t"
+                         << f4.NoiDi3 << "\t\t"
+                         << f4.NoiDen3 << "\t\t"
+                         << f4.ThoiGianDi3 << "\t\t"
+                         << f4.ThoiGianDen3 << "\n\n";
+                    foundMatch = true;
+                }
+                break;
+            case 2:
+            cout<<"Nhap Noi Den: ";cin>>noiden;
+                if (f4.NoiDen3 == noiden) {
+                    cout << "Ma May Bay\tNoi Di\t\tNoi Den\t\tThoi Gian Di\t\tThoi Gian Den\n";
+                    cout << "\n" << f4.MaMayBay3 << "\t\t"
+                         << f4.NoiDi3 << "\t\t"
+                         << f4.NoiDen3 << "\t\t"
+                         << f4.ThoiGianDi3 << "\t\t"
+                         << f4.ThoiGianDen3 << "\n\n";
+                    foundMatch = true;
+                }
+                break;
+        }
+    }
+
+    file.close();
+
+    if (!foundMatch) {
+        cout << "Khong tim thay chuyen bay.\n";
+    }
+}
